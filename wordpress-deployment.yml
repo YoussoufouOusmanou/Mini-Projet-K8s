@@ -18,9 +18,9 @@ spec:
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
-          value: wordpress-mysql
+          value: admin
         - name: WORDPRESS_DB_PASSWORD
-          value: wordpress-password
+          value: admin
         ports:
         - containerPort: 80
           name: wordpress
