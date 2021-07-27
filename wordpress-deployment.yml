@@ -18,9 +18,16 @@ spec:
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
-          value: admin
+          value: mysql.default.svc.cluster.local
         - name: WORDPRESS_DB_PASSWORD
-          value: admin
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: MYSQL_ROOT_PASSWORD
+        - name: WORDPRESS_DB_USER
+          value: root
+        - name: WORDPRESS_DB_NAME
+          value: wordpress
         ports:
         - containerPort: 80
           name: wordpress
@@ -29,3 +36,5 @@ spec:
           mountPath: /var/www/html
       volumes:
       - name: data
+        #hostPath:
+        #    path: ./data

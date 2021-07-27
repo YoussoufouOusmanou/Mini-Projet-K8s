@@ -17,9 +17,9 @@ spec:
       containers:
       - name: mysql
         image: mysql
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          value: admin
+        #env:
+        #- name: MYSQL_ROOT_PASSWORD
+        #  value: admin
         ports:
         - containerPort: 80
         volumeMounts:
