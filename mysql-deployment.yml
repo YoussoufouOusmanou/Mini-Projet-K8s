@@ -3,25 +3,28 @@ kind: Deployment
 metadata:
   name: mysql-deployment
   labels:
-    app: wordpress
+    app: mysqlAp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wordpress
+      app: mysqlAp
   template:
     metadata:
       labels:
-        app: wordpress
+        app: mysqlAp
     spec:
       containers:
       - name: mysql
         image: mysql
-        #env:
-        #- name: MYSQL_ROOT_PASSWORD
-        #  value: admin
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+             secretKeyRef:
+                name: db-secret
+                key: password
         ports:
-        - containerPort: 80
+        - containerPort: 3306
         volumeMounts:
         - name: mysql-data
           mountPath: /var/lib/mysql

@@ -5,8 +5,8 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app: wordpress
+    app: mysqlAp
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80
+      targetPort: 3306
