@@ -18,7 +18,7 @@ spec:
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
-          value: mysql.default.svc.cluster.local
+          value: service-clusterip
         - name: WORDPRESS_DB_PASSWORD
           valueFrom:
             secretKeyRef:

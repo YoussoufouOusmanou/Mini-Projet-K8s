@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: mysql-deployment
   labels:
-    app: mysqlAp
+    app: wordpress
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mysqlAp
+      app: wordpress
   template:
     metadata:
       labels:
-        app: mysqlAp
+        app: wordpress
     spec:
       containers:
       - name: mysql
