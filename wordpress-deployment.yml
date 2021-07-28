@@ -9,13 +9,13 @@ spec:
  selector:
     matchLabels:
       app: wordpress
-  template:
+ template:
     metadata:
       labels:
         app: wordpress
     spec:
       containers:
-      - image: wordpress
+      - image: wordpress:4.8-apache
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
