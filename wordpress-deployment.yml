@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: wordpress
   labels:
-    app: wordpress
+    app: wordpress-deployment
 spec:
   selector:
     matchLabels:
