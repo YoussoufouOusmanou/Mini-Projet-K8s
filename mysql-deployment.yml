@@ -20,14 +20,6 @@ spec:
         env:
         - name: MYSQL_DATABASE
           value: wordpress
-        - name: MYSQL_USER
-          value: root
-        #- name: MYSQL_PASSWORD
-        #  value: admin123
-          #valueFrom:
-          #  secretKeyRef:
-          #    name: db-secret
-          #    key: password
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
              secretKeyRef:
