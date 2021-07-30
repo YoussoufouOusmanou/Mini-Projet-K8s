@@ -8,11 +8,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wordpress
+      app: mysql-deploy
   template:
     metadata:
       labels:
-        app: wordpress
+        app: mysql-deploy
     spec:
       containers:
       - name: mysql
@@ -34,5 +34,7 @@ spec:
           mountPath: /var/lib/mysql
       volumes:
       - name: mysql-data
-
+        hostPath:
+            path: /root/Mini-Projet-K8s/mysql-data
+            type: DirectoryOrCreate
 
