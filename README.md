@@ -1,3 +1,5 @@
+# Sujet
+
 • Déployez wordpress en suivant les étapes suivantes
 
     - Créez un deployment mysql avec un seul replicat
@@ -20,6 +22,7 @@
 eazytrainingfr@gmail.com et nous vous dirons si votre solution respecte les bonnes pratiques et si votre solution
 bonne. Nous vous proposerons aussi notre solution/
 
+# rendu 
 
 Lancez les objets k8s avec les commandes suivantes:
 
